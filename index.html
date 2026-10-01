@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#0d1b2a" />
+<title>低多边形露营地 · Low-Poly Campsite</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>⛺</text></svg>" />
+<link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <div id="vignette" aria-hidden="true"></div>
+
+  <!-- 加载遮罩 -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-fire">
+        <span></span><span></span><span></span>
+      </div>
+      <p>正在搭建营地…</p>
+    </div>
+  </div>
+
+  <!-- 左上角信息卡 -->
+  <header id="hud-title">
+    <h1>低多边形露营地</h1>
+    <p class="sub">Low-Poly Campsite · Three.js</p>
+    <p class="hint">拖拽旋转 · 滚轮缩放 · 右键平移</p>
+  </header>
+
+  <!-- 状态条 -->
+  <div id="hud-status">
+    <span class="status-item"><i class="dot" id="dot-phase"></i><span id="label-phase">白天</span></span>
+    <span class="status-sep"></span>
+    <span class="status-item"><i class="dot" id="dot-fire"></i><span id="label-fire">篝火燃烧中</span></span>
+    <span class="status-sep"></span>
+    <span class="status-item muted"><span id="label-perf">— fps</span></span>
+  </div>
+
+  <!-- 底部控制面板 -->
+  <nav id="controls">
+    <button id="btn-phase" class="ctrl" type="button">
+      <span class="icon" id="icon-phase">🌙</span>
+      <span class="txt" id="txt-phase">切换夜晚</span>
+    </button>
+    <button id="btn-fire" class="ctrl" type="button">
+      <span class="icon" id="icon-fire">🔥</span>
+      <span class="txt" id="txt-fire">熄灭篝火</span>
+    </button>
+    <button id="btn-view" class="ctrl" type="button">
+      <span class="icon">🎥</span>
+      <span class="txt">重置视角</span>
+    </button>
+  </nav>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

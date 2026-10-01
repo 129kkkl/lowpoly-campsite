@@ -1,0 +1,19 @@
+{
+  "name": "lowpoly-campsite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "低多边形风格露营地场景 · Three.js + Vite",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/inline.mjs",
+    "preview": "vite preview",
+    "serve:dist": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}
